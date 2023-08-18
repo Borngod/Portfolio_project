@@ -1,3 +1,5 @@
+<img src= "cohort_section.png">
+
  # ALX Cohort 11 Graduating Group Website
 
 We are excited to propose the creation of a dedicated website for Cohort 11 of the
