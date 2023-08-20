@@ -1,4 +1,4 @@
-<img src= "alx_site_cohort_11/cohort_section.png">
+<img src= "cohort_section.png">
 
  # ALX Cohort 11 Graduating Group Website
 
