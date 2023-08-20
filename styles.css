@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'poppins', sans-serif;
+    
+   
+  }
+  
+  /* ############################
+  this is a mobile first design 
+  ##############################*/
+  
+  /* styling the nav */
+  header{
+    width: 100%;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    margin-top: 0.5em;
+    background-color: rgba(255, 255, 255, 0.81);
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    z-index:2;
+    position: relative;
+  }
+  
+  nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin-right: 0.5em;
+    display: none;
+  
+  }
+  .brand-img img{
+    max-height: 100%;
+    width: 5.4375rem;
+    margin-left: 2em;
+    margin-top: 0.5em;
+  }
+  
+  nav img{
+    width: 1.5625rem;
+    max-height: 100%;
+    margin-right: 2em;
+  }
+  
+  /* end of nav styling */
+  
+  
+  /* styling the carousel */
+  .carousel{
+  
+   position: relative;
+   top: -50px;
+   overflow: hidden;
+    
+   
+  }
+  .carousel-slide{
+    display: flex;
+   
+   
+  }
+  .carousel img{
+   
+    
+    z-index: 1;
+    width: 26.875rem;
+    height: 16.875rem;
+    object-fit: cover;
+    
+   
+  }
+
+  
+  
