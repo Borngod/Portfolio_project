@@ -167,8 +167,8 @@
   .carousel img{
    
     z-index: 1;
-    width: 26.875rem;
-    height: 16.875rem;
+    width: 100%;
+    height: 20.875rem;
     object-fit: cover;
    
   }
