@@ -167,8 +167,8 @@
   .carousel img{
    
     z-index: 1;
-    width: 26.875rem;
-    height: 16.875rem;
+    width: 100%;
+    height: 22.875rem;
     object-fit: cover;
    
   }
@@ -447,12 +447,14 @@ p.no-way {
 
   div.swiper-button-next, div.swiper-button-prev{
     top:45%;
+    -webkit-tap-highlight-color: transparent;
     
     
   }
 
   div.swiper-button-next{
     left: 90%;
+    -webkit-tap-highlight-color: transparent;
     
   }
 
@@ -740,12 +742,14 @@ p.no-way {
   top: -100px;
   left: 55%;
   cursor:pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .arrow-right{
   left: 55%;
   position: relative;
   top: -419px;
   cursor:pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .rotate-box-1:hover,
