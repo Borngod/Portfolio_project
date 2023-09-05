@@ -6,7 +6,7 @@ We are excited to propose the creation of a dedicated website for Cohort 11 of t
 ALX program, aiming to bring together the graduating group to share and relive our fun and memorable moments throughout our ALX journey.
 Access site here https://borngod.github.io/Portfolio_project/
 # Team Members
-`Angela Ayivi` and `Bernard Appiah`
+`Angela Ayivi` <=> `Bernard Appiah` <=> `Beatrice Winful`
 -   [Bernard Appiah](https://github.com/borngod): wrote the project proposal, designed the mockup for the website, also worked on implementing the web design  into  codes with angela
 -   [Angela Ayivi](https://github.com/bloominghowl): implemented the web design to code using HTML, CSS, JavaScript.
  
