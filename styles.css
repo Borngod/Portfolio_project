@@ -107,6 +107,7 @@
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
     z-index:3;
     position: relative;
+    transition: 0.3s ease-out;
   }
 
   
@@ -127,8 +128,10 @@
   }
 
   #scrolling-nav.hidden {
-    top: -50px; /* Adjust this value to hide the nav completely */
+    top: -90px; /* Adjust this value to hide the nav completely */
   }
+
+ 
 
   
   
@@ -167,7 +170,7 @@
   .carousel img{
    
     z-index: 1;
-    width: 100%;
+    width: 100% ;
     height: 22.875rem;
     object-fit: cover;
    
@@ -909,3 +912,411 @@ filter: drop-shadow(-2px 4px 0px rgba(0, 0, 0, 0.25));
   font-size: 1.5rem;
 }
 /* end of footer styling  */
+
+
+
+/* desktop styling  */
+
+@media(min-width:768px){
+
+  /* styling of nav for desktop mode  */
+  .navbar{
+    height: 4.1875rem;
+    border-radius: 10px;
+    width: 70%;
+  }
+  .handbugger-nav {
+    display: none;
+  }
+
+  .brand-img #img-brand{
+    width: 15.625rem;
+    height: 4.625rem;
+    object-fit: contain;
+    margin: 0;
+  }
+
+  .nav-list{
+    display: block;
+    display: flex;
+    font-size: 1.5rem;
+    margin-right: 3em;
+    align-items: center;
+    
+  }
+
+ .nav-list li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav-list li a:hover,
+  .nav-list li a:focus{
+    border-bottom: 2px solid #ba0878;
+    font-weight: 500;
+  }
+
+  /* end of nav styling for desktop */
+
+  /* styling for carousel section */
+.carousel img {
+  /* height: 32.0625rem; */
+  /* object-fit: cover; */
+  width: 100rem;
+  height: 789px;
+ 
+  
+}
+
+.carousel{
+  top: -75px;
+  text-align: center;
+  
+}
+
+/* end of styling for carousel section */
+
+/* styling for the main section of the body */
+.join-us-reason{
+  width: 55.87525rem;
+  left: 8%;
+  top: 765px;
+  z-index: 100;
+  border-top: 2px white solid ;
+  height: auto;
+  border-bottom: 3px solid white;
+  position: absolute;
+ 
+}
+
+.join-us-reason p{
+  font-size: 2.5rem;
+  text-shadow: 0px 0px 10px black;
+}
+
+.days-container, .hours-container, .minutes-container, .seconds-container{
+    width: 140px;
+    height: 140px;
+    font-size: 0.9rem;
+}
+
+
+.about-us{
+  width:40.87525rem;
+  left: 58%;
+  top: -110px;
+  z-index: 110;
+  background-color: whitesmoke;
+  height: auto;
+}
+
+.about-us p{
+  font-size: 1.3rem;
+}
+
+p.about-us-1::first-letter{
+  font-size: 2.4rem;
+}
+
+.contact-us{
+  width: 10rem;
+  height: 4rem;
+}
+
+.contact-us p{
+  padding-top: 0.6em;
+  
+}
+
+.banner img{
+  width: 84.5%;
+  height: 20.625rem;
+  margin-left: 9.5em;
+  margin-top: -1em;
+  object-fit: cover;
+}
+
+.year-story {
+  margin-left: 10em;
+}
+
+
+div.design p{
+  font-size: 2rem;
+  width: 100%;
+  padding: unset;
+  margin-left: -1rem;
+}
+
+.design-box-1{
+  background-color: #E8D2E0;
+  width: 65.8125rem;
+  height: 20.5625rem;
+  position: relative;
+  z-index: -5;
+  top: -1080px;
+  left: 30%;
+ 
+
+}
+
+.design-box{
+
+  
+  background-color: #E8D2E0;
+  width: 100.8125rem;
+  height: 50.5625rem;
+  position: relative;
+  z-index: -5;
+  top: -780px;
+  border-bottom: 2px solid #ba0878;
+  border-top: 2px solid #ba0878;
+  
+  text-align: center;
+}
+.year-intro .year-header{
+ font-size: 2rem;
+ padding-left: unset
+}
+
+.year-intro p {
+  font-size: 1.5rem;
+  padding-left: unset;
+}
+
+.swiper-cards {
+  text-align: center;
+ 
+}
+
+.slide-2{
+  padding: 3em;
+}
+
+.slide-2 img{
+  width: 37.875rem;
+  height: 35.875rem;
+}
+
+.swiper-button-next,.swiper-button-prev{
+color: #ba0878;
+
+}
+
+
+div.swiper-button-next {
+  left: 80%;
+  
+}
+
+div.swiper-button-prev{
+  left: 20%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after{
+  color: #ba0878;
+}
+
+.meet-cohort-11 .airplane{
+  display: none;
+}
+.meet-cohort-11{
+  top: -60px;
+  
+}
+.meet-cohort-11 .head{
+  top: -720px;
+  position: relative;
+  font-size: 2rem;
+  margin-left: 4em;
+}
+
+.about-11{
+  position: relative;
+  top: -700px;
+  left: 7.5%;
+  width: 42%;
+  font-size: 1.2rem;
+}
+.design-box-2{
+  background-color: #E8D2E0;
+  height: 25rem;
+  width: 47rem;
+  position: relative;
+  top: -830px;
+  left: 54%;
+  z-index: -2;
+  border-top: 2px solid #ba0878;
+}
+.design-box-3{
+  height: 30rem;
+  width: 55rem;
+  top: -850px;
+  background-color: #E8D2E0;
+  position: relative;
+  z-index: -2;
+  left: 8%;
+  border-bottom: #ba0878 solid 3px;
+}
+
+
+
+.swiper-container-3 {
+  width: 30rem;
+  margin-left: 14em;
+  
+}
+
+.swiper-slide.slide-3{
+  height: 35rem;
+  
+}
+
+.swiper-slide.slide-3 {
+  height: 35rem;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  left: 550px !important;
+  top: 180px !important;
+  position: relative;
+}
+
+.container-clip{
+  
+}
+
+.meet-cohort-11 .container{
+  overflow-x: clip;
+  width: 1768px;
+  max-width: unset;
+  margin-left: 20em;
+  top: -1590px;
+  left: -20%;
+  
+}
+
+.image-content::after{
+  top: 8%;
+}
+.image-content::after{
+  top: 5.7%;
+}
+
+.swiper-button-next.swiper-color{
+  right: 25%;
+}
+ .swiper-button-prev.swiper-color{
+  left: -5%
+
+ }
+
+ .memes{
+  top: -1300px;
+  margin-left: 9em;
+ }
+
+ .intro h4{
+  font-size: 2rem;
+  padding: unset;
+ }
+
+ .intro p{
+  padding: unset;
+  font-size: 1.5rem;
+ }
+
+ .rotate-box-1 {
+  width: 34.0625rem; 
+  height: 27.875rem;
+  top: 80px;
+  left: 9%;
+ }
+
+ .rotate-box-2,
+ .rotate-box-3{
+  width: 13.5625rem;
+  height: 12.5625rem;
+  left:60% ;
+ }
+  
+ .rotate-box-2{
+  top: -400px;
+ }
+
+ .rotate-box-3{
+  top: -300px;
+ }
+
+ .arrow-right{
+  top: -900px;
+  left: 45%;
+ }
+ .arrow-left{
+  left: 45%;
+  top: -250px;
+ }
+
+ .emo-laugh{
+  left: 50%;
+  top: -750px;
+  width: 8.3125rem;
+  height: 8.3125rem;
+  
+ }
+
+ .image-content img {
+  left: 25%;
+  top: 2%;
+  width: 14.48719rem;
+  height: 14.48719rem;
+ }
+
+ .exceptional{
+  top: -1650px;
+  height: 20.75rem;
+  margin-bottom: -100em;
+ }
+
+ .exceptional h4{
+  font-size: 2.5rem;
+  margin-left: 3em;
+ }
+
+ .addresses .addresses-1{
+  width: 32.75rem;
+  margin-left: 6em;
+ }
+
+ .addresses p{
+  font-size: 50px;
+ }
+
+ .addresses p::first-letter {
+  content: '';
+  font-size: 60px;
+ }
+
+ .addresses .addresses-2{
+  width: 22rem;
+  margin-right: 8em;
+ }
+
+ .final{
+  top: 1%;
+  position: relative;
+ }
+
+ body{
+  height: 100rem;
+ }
+/* .swiper-slide .slide-3 .swiper-slide-active{
+  height: 620px !important;
+
+} */
+}
+
+
+
+

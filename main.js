@@ -15,61 +15,74 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // count down clock
 const countDownClock = (number = 100, format = 'seconds') => {
-  
-    const d = document;
-    const daysElement = d.querySelector('.days');
-    const hoursElement = d.querySelector('.hours');
-    const minutesElement = d.querySelector('.minutes');
-    const secondsElement = d.querySelector('.seconds');
-    let countdown;
+  const d = document;
+  const daysElement = d.querySelector('.days');
+  const hoursElement = d.querySelector('.hours');
+  const minutesElement = d.querySelector('.minutes');
+  const secondsElement = d.querySelector('.seconds');
+  let countdown;
+  convertFormat(format);
+
+  // Check if countdown data is stored and retrieve it
+  const storedCountdownData = JSON.parse(localStorage.getItem('countdownData'));
+  if (storedCountdownData) {
+    number = storedCountdownData.number;
+    format = storedCountdownData.format;
     convertFormat(format);
-    
-    
-    function convertFormat(format) {
-      switch(format) {
-        case 'seconds':
-          return timer(number);
-        case 'minutes':
-          return timer(number * 60);
-          case 'hours':
-          return timer(number * 60 * 60);
-        case 'days':
-          return timer(number * 60 * 60 * 24);             
-      }
-    }
-  
-    function timer(seconds) {
-      const now = Date.now();
-      const then = now + seconds * 1000;
-  
-      countdown = setInterval(() => {
-        const secondsLeft = Math.round((then - Date.now()) / 1000);
-  
-        if(secondsLeft <= 0) {
-          clearInterval(countdown);
-          return;
-        };
-  
-        displayTimeLeft(secondsLeft);
-  
-      },1000);
-    }
-  
-    function displayTimeLeft(seconds) {
-      daysElement.textContent = Math.floor(seconds / 86400);
-      hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
-      minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
-      secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+  } else {
+    // If no stored data is found, set the default countdown
+    saveCountdownData(number, format);
+  }
+
+  function saveCountdownData(number, format) {
+    // Save countdown data to localStorage
+    localStorage.setItem('countdownData', JSON.stringify({ number, format }));
+  }
+
+  function convertFormat(format) {
+    switch (format) {
+      case 'seconds':
+        return timer(number);
+      case 'minutes':
+        return timer(number * 60);
+      case 'hours':
+        return timer(number * 60 * 60);
+      case 'days':
+        return timer(number * 60 * 60 * 24);
     }
   }
-  
-  
-  /*
-    start countdown
-    enter number and format
-    days, hours, minutes or seconds
-  */
-  countDownClock(20, 'days');
+
+  function timer(seconds) {
+    const now = Date.now();
+    const then = now + seconds * 1000;
+
+    countdown = setInterval(() => {
+      const secondsLeft = Math.round((then - Date.now()) / 1000);
+
+      if (secondsLeft <= 0) {
+        clearInterval(countdown);
+        return;
+      }
+
+      displayTimeLeft(secondsLeft);
+    }, 1000);
+  }
+
+  function displayTimeLeft(seconds) {
+    daysElement.textContent = Math.floor(seconds / 86400);
+    hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+    minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+    secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+  }
+}
+
+/*
+  start countdown
+  enter number and format
+  days, hours, minutes, or seconds
+*/
+countDownClock(20, 'days');
+
 
   var swiper = new Swiper('.swiper-container-1', {
     speed: 500,
@@ -83,6 +96,7 @@ const countDownClock = (number = 100, format = 'seconds') => {
 
   });
 
+  // hidden nav when scrolling down 
   const scrollingNav = document.getElementById('scrolling-nav');
   let lastScrollPosition = 0;
   
@@ -94,12 +108,14 @@ const countDownClock = (number = 100, format = 'seconds') => {
       scrollingNav.classList.add('hidden');
     } else {
       // Scrolling up
-      scrollingNav.classList.add('hidden');
+      scrollingNav.classList.remove('hidden');
+      scrollingNav.classList.add('hidden-fixed');
+
     }
   
     // Reset nav position when scrolled back to the absolute top
     if (currentScrollPosition === 0) {
-      scrollingNav.classList.remove('hidden');
+      scrollingNav.classList.remove('hidden-fixed');
     }
   
     lastScrollPosition = currentScrollPosition;
