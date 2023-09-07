@@ -1312,13 +1312,15 @@ div.swiper-button-prev{
  }
 
  body{
-  height: 100rem;
+  overflow-y: clip;
+  height: 310.4rem !important;
+}
  }
 /* .swiper-slide .slide-3 .swiper-slide-active{
   height: 620px !important;
 
 } */
-}
+
 
 
 
